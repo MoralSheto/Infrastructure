@@ -1,0 +1,7 @@
+#### WARNING: branding logos not installed ###
+RUN:
+/usr/local/scripts/infra/fix_branding.sh -f
+
+### WARNING: query-blockstats enabled :: WARNING: Cluster Size patch not applied ###
+RUN:
+/usr/local/scripts/infra/apply_pvepatch.sh cluster_size
