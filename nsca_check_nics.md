@@ -1,0 +1,11 @@
+### CRITICAL: RPS not applied on: eth0 ###
+
+RUN THESE FOLLOWING COMMANDS:
+
+`. /etc/nagios/nscaConfig`
+
+`cp /storage/$hostzone-cdimage/system/scripts/kvm/usr/local/scripts/infra/set_nics_rps.sh /usr/local/scripts/infra/set_nics_rps.sh`
+
+`/usr/local/scripts/infra/set_nics_rps.sh apply all`
+
+`sysctl -w net.core.netdev_max_backlog=2000`
